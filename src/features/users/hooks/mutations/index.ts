@@ -14,14 +14,14 @@ export const useCreateUserMutation = () => {
     })
 }
 
-// export const useUpdatePostMutation = (id: number) => {
-//     return useMutation({
-//         mutationFn: (payload: PostFormData) => postApi.update(id, payload),
-//         onSuccess: () => {
-//             queryClient.invalidateQueries({
-//                 queryKey: ['posts', id],
-//                 exact: false
-//             })
-//         } 
-//     })
-// }
+export const useUpdateUserMutation = (id: number) => {
+    return useMutation({
+        mutationFn: (payload: UserFormData) => userApi.update(id, payload),
+        onSuccess: () => {
+            queryClient.invalidateQueries({
+                queryKey: ['users', id],
+                exact: false
+            })
+        } 
+    })
+}
