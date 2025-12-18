@@ -8,6 +8,7 @@ import UserDetailsPage from "@/pages/users/[id]";
 import WritePostPage from "@/pages/posts/write";
 import EditPostPage from "@/pages/posts/[id]/edit";
 import AddUserPage from "@/pages/users/add";
+import EditUserPage from "@/pages/users/[id]/edit";
 
 const AppRouter = () => {
     return (
@@ -25,6 +26,7 @@ const AppRouter = () => {
                         <Route index element={<UsersPage />} />
                         <Route path=":id" element={<UserDetailsPage />} />
                         <Route path="add" element={<AddUserPage />} />
+                        <Route path=":id/edit" element={<EditUserPage />} />
                     </Route>
                 </Route>
 
